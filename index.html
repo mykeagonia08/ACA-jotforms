@@ -33,16 +33,16 @@
             <h3>Great. You're one step away from getting your FREE ESTIMATE !</h3>
 
             <div class="container">              
-                <label for="fullname">Full Name</label>
+                <label for="fullname" id="lblFullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Full Name">
 
-                <label for="email">Email</label>
+                <label for="email" id="lblEmail">Email</label>
                 <input type="email" id="email" name="email" placeholder="Email">
 
-                <label for="phone">Phone</label>
+                <label for="phone" id="lblPhone">Phone</label>
                 <input type="text" id="phone" name="phone" placeholder="Phone">
 
-                <label for="zipcode">Zip Code</label>
+                <label for="zipcode" id="lblZipcode">Zip Code</label>
                 <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code">
 
                 <h3><img src="http://www.after-car-accidents.com/images/Lock_icon.png">Your Information is 100% Secure and Confidential</h3>
@@ -53,15 +53,20 @@
             //always subscribe to ready event and implement widget related code
             //inside callback function , it is the best practice while developing widgets
             JFCustomWidget.subscribe("ready", function(){
+                JFCustomWidget.requestFrameResize(620, 400); //Request Frame Resize
+
                 var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                document.getElementById('labelText').innerHTML = label;
+                document.getElementById('lblFullname').innerHTML = label;
+                document.getElementById('lblEmail').innerHTML = label;
+                document.getElementById('lblPhone').innerHTML = label;
+                document.getElementById('lblZipcode').innerHTML = label;
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
                     var msg = {
                         //you should valid attribute to data for JotForm
                         //to be able to use youw widget as required
                         valid: true,
-                        value: document.getElementById('userInput').value
+                        value: "Contact Information"
                     }
                     // send value to JotForm
                     JFCustomWidget.sendSubmit(msg);
