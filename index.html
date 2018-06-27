@@ -53,13 +53,14 @@
             //always subscribe to ready event and implement widget related code
             //inside callback function , it is the best practice while developing widgets
             JFCustomWidget.subscribe("ready", function(){
-                JFCustomWidget.requestFrameResize(620, 400); //Request Frame Resize
+                JFCustomWidget.requestFrameResize(620, 800); //Request Frame Resize
 
-                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                document.getElementById('lblFullname').innerHTML = label;
-                document.getElementById('lblEmail').innerHTML = label;
-                document.getElementById('lblPhone').innerHTML = label;
-                document.getElementById('lblZipcode').innerHTML = label;
+                JFCustomWidget.getWidgetSettings();
+                // var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
+                // document.getElementById('lblFullname').innerHTML = label;
+                // document.getElementById('lblEmail').innerHTML = label;
+                // document.getElementById('lblPhone').innerHTML = label;
+                // document.getElementById('lblZipcode').innerHTML = label;
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
                     var msg = {
