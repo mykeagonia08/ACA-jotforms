@@ -31,6 +31,7 @@
 
             .phone {
                 width: 32%;
+                text-align: center;
                 box-sizing: border-box;
                 display: inline-block;
                 padding: 12px;                
@@ -48,6 +49,13 @@
                 border-right: 1px solid #c3c3c3;
                 border-bottom: 1px solid #ddd;
                 background: #fff;
+            }
+
+            .dash:after {
+                content: " - "; 
+            }
+            .dash:last-of-type:after{
+               content: " "; 
             }
 
             
@@ -283,7 +291,15 @@
                 .phone {
                     width: 30%;
                 }
-              }
+            }
+
+            @media screen 
+              and (min-width: 533px) {
+                .phone {
+                    width: 31%;
+                }
+            }
+            
             @media screen and (min-width: 726px) {
                 .phone {
                     width: 31.80%;
@@ -301,11 +317,10 @@
         <input type="email" id="email" name="email" class="required">
 
         <label for="phone" id="lblPhone">Phone <span class="req">*</span></label>
-        <input name="prim1" type="text" id="prim1" size="3" class="required phone">
-        <span>-</span>
-        <input name="prim2" type="text" id="prim2" size="3" class="required phone">
-        <span>-</span>
-        <input name="prim3" type="text" id="prim3" size="4" class="required phone">
+        <span class="dash"><input name="prim1" type="tel" id="prim1" maxlength="3" size="3" class="required phone" placeholder="###"></span>
+        <span class="dash"><input name="prim2" type="tel" id="prim2" maxlength="3" size="3" class="required phone" placeholder="###"></span>
+        <span class="dash"><input name="prim3" type="tel" id="prim3" maxlength="4" size="4" class="required phone" placeholder="####"></span>
+
 
         <label for="zipcode" id="lblZipcode">Zip Code <span class="req">*</span></label>
         <input type="text" id="zipcode" name="zipcode" class="required">
