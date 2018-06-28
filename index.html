@@ -7,13 +7,21 @@
 
         <style type="text/css">
 
-            /*------------------*/
+            /*--------- GLOBAL ---------*/
             body {font-family: Roboto, Helvetica, sans-serif;}
 
-            input[type=text], input[type=email], select, textarea {
+            .req {
+                color: red;
+            }
+
+            #lblFullname, #lblEmail, #lblPhone, #lblZipcode {
+                display: block;
+            }
+
+            #fullname, #email, #zipcode {
                 width: 100%;
-                padding: 12px;
-                border: 1px solid #ccc;
+                display: block;
+                padding: 12px;                
                 border-radius: 4px;
                 box-sizing: border-box;
                 margin-top: 6px;
@@ -21,10 +29,266 @@
                 resize: vertical;
             }
 
-            input[type=submit]:hover {
-                background-color: #45a049;
+            .phone {
+                width: 32%;
+                box-sizing: border-box;
+                display: inline-block;
+                padding: 12px;                
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                font-size: 18px;
+                resize: vertical;
+            }
+
+            input[type=text], input[type=email] {
+                border-top: 1px solid #7c7c7c;
+                border-left: 1px solid #c3c3c3;
+                border-right: 1px solid #c3c3c3;
+                border-bottom: 1px solid #ddd;
+                background: #fff;
+            }
+
+            
+            /* ----------- iPhones ----------- */
+
+            /* ----------- iPhone 4 and 4S ----------- */
+
+            /* Portrait and Landscape */
+            @media only screen 
+              and (min-device-width: 320px) 
+              and (max-device-width: 480px)
+              and (-webkit-min-device-pixel-ratio: 2) {
+                .phone {
+                    width: 30%;
+                }
+            }
+
+            /* Portrait */
+            @media only screen 
+              and (min-device-width: 320px) 
+              and (max-device-width: 480px)
+              and (-webkit-min-device-pixel-ratio: 2)
+              and (orientation: portrait) {
+            }
+
+            /* Landscape */
+            @media only screen 
+              and (min-device-width: 320px) 
+              and (max-device-width: 480px)
+              and (-webkit-min-device-pixel-ratio: 2)
+              and (orientation: landscape) {
+
+            }
+
+            /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+            /* Portrait and Landscape */
+            @media only screen 
+              and (min-device-width: 320px) 
+              and (max-device-width: 568px)
+              and (-webkit-min-device-pixel-ratio: 2) {
+
+            }
+
+            /* Portrait */
+            @media only screen 
+              and (min-device-width: 320px) 
+              and (max-device-width: 568px)
+              and (-webkit-min-device-pixel-ratio: 2)
+              and (orientation: portrait) {
+            }
+
+            /* Landscape */
+            @media only screen 
+              and (min-device-width: 320px) 
+              and (max-device-width: 568px)
+              and (-webkit-min-device-pixel-ratio: 2)
+              and (orientation: landscape) {
+
+            }
+
+            /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+            /* Portrait and Landscape */
+            @media only screen 
+              and (min-device-width: 375px) 
+              and (max-device-width: 667px) 
+              and (-webkit-min-device-pixel-ratio: 2) { 
+
+            }
+
+            /* Portrait */
+            @media only screen 
+              and (min-device-width: 375px) 
+              and (max-device-width: 667px) 
+              and (-webkit-min-device-pixel-ratio: 2)
+              and (orientation: portrait) { 
+
+            }
+
+            /* Landscape */
+            @media only screen 
+              and (min-device-width: 375px) 
+              and (max-device-width: 667px) 
+              and (-webkit-min-device-pixel-ratio: 2)
+              and (orientation: landscape) { 
+
+            }
+
+            /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+            /* Portrait and Landscape */
+            @media only screen 
+              and (min-device-width: 414px) 
+              and (max-device-width: 736px) 
+              and (-webkit-min-device-pixel-ratio: 3) { 
+
+            }
+
+            /* Portrait */
+            @media only screen 
+              and (min-device-width: 414px) 
+              and (max-device-width: 736px) 
+              and (-webkit-min-device-pixel-ratio: 3)
+              and (orientation: portrait) { 
+
+            }
+
+            /* Landscape */
+            @media only screen 
+              and (min-device-width: 414px) 
+              and (max-device-width: 736px) 
+              and (-webkit-min-device-pixel-ratio: 3)
+              and (orientation: landscape) { 
+
+            }
+
+            /* ----------- iPhone X ----------- */
+
+            /* Portrait and Landscape */
+            @media only screen 
+              and (min-device-width: 375px) 
+              and (max-device-width: 812px) 
+              and (-webkit-min-device-pixel-ratio: 3) { 
+
+            }
+
+            /* Portrait */
+            @media only screen 
+              and (min-device-width: 375px) 
+              and (max-device-width: 812px) 
+              and (-webkit-min-device-pixel-ratio: 3)
+              and (orientation: portrait) { 
+
+            }
+
+            /* Landscape */
+            @media only screen 
+              and (min-device-width: 375px) 
+              and (max-device-width: 812px) 
+              and (-webkit-min-device-pixel-ratio: 3)
+              and (orientation: landscape) { 
+
+            }
+
+            /* ----------- Galaxy S3 ----------- */
+
+            /* Portrait and Landscape */
+            @media screen 
+              and (device-width: 320px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 2) {
+
+            }
+
+            /* Portrait */
+            @media screen 
+              and (device-width: 320px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 2) 
+              and (orientation: portrait) {
+
+            }
+
+            /* Landscape */
+            @media screen 
+              and (device-width: 320px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 2) 
+              and (orientation: landscape) {
+
+            }
+
+            /* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+            /* Portrait and Landscape */
+            @media screen 
+              and (device-width: 320px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 3) {
+
+            }
+
+            /* Portrait */
+            @media screen 
+              and (device-width: 320px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 3) 
+              and (orientation: portrait) {
+
+            }
+
+            /* Landscape */
+            @media screen 
+              and (device-width: 320px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 3) 
+              and (orientation: landscape) {
+
+            }
+
+            /* ----------- Galaxy S6 ----------- */
+
+            /* Portrait and Landscape */
+            @media screen 
+              and (device-width: 360px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 4) {
+
+            }
+
+            /* Portrait */
+            @media screen 
+              and (device-width: 360px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 4) 
+              and (orientation: portrait) {
+
+            }
+
+            /* Landscape */
+            @media screen 
+              and (device-width: 360px) 
+              and (device-height: 640px) 
+              and (-webkit-device-pixel-ratio: 4) 
+              and (orientation: landscape) {
+
             }
             
+
+            @media screen 
+              and (min-width: 481px) {
+                .phone {
+                    width: 30%;
+                }
+              }
+            @media screen and (min-width: 726px) {
+                .phone {
+                    width: 31.80%;
+                }
+            }
 
         </style>
     </head>
@@ -32,17 +296,21 @@
 
             <h3>Great. You're one step away from getting your FREE ESTIMATE !</h3>
             
-                <label for="fullname" id="lblFullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+                <label for="fullname" id="lblFullname">Full Name <span class="req">*</span></label>
+                <input type="text" id="fullname" name="fullname" class="required">
 
-                <label for="email" id="lblEmail">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email">
+                <label for="email" id="lblEmail">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="required">
 
-                <label for="phone" id="lblPhone">Phone</label>
-                <input type="text" id="phone" name="phone" placeholder="Phone">
+                <label for="phone" id="lblPhone">Phone <span class="req">*</span></label>
+                <input name="prim1" type="text" id="prim1" size="3" class="required phone">
+                <span>-</span>
+                <input name="prim2" type="text" id="prim2" size="3" class="required phone">
+                <span>-</span>
+                <input name="prim3" type="text" id="prim3" size="4" class="required phone">
 
-                <label for="zipcode" id="lblZipcode">Zip Code</label>
-                <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code">
+                <label for="zipcode" id="lblZipcode">Zip Code <span class="req">*</span></label>
+                <input type="text" id="zipcode" name="zipcode" class="required">
 
                 <h3><img src="http://www.after-car-accidents.com/images/Lock_icon.png">Your Information is 100% Secure and Confidential</h3>
                 <p style="align:center;">Disclaimer: By submitting your request, you grant permission for up to two of our premier partners to contact you using the phone number or email address you have provided so we may assist you with your request for a free case evaluation and potentially an offer of representation and services. You agree that the matched partner may use an automatic telephone dialing system even if the number you provided is a wireless phone number. You understand that consent to being contacted is not a condition of purchase or acceptance of services of any kind.</p>
@@ -53,11 +321,12 @@
             JFCustomWidget.subscribe("ready", function(){
                 JFCustomWidget.requestFrameResize(600, 700); //Request Frame Resize
                 
-                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                document.getElementById('lblFullname').innerHTML = label;
-                document.getElementById('lblEmail').innerHTML = label;
-                document.getElementById('lblPhone').innerHTML = label;
-                document.getElementById('lblZipcode').innerHTML = label;
+                JFCustomWidget.getWidgetSettings();
+                // var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
+                // document.getElementById('lblFullname').innerHTML = label;
+                // document.getElementById('lblEmail').innerHTML = label;
+                // document.getElementById('lblPhone').innerHTML = label;
+                // document.getElementById('lblZipcode').innerHTML = label;
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
                     var msg = {
