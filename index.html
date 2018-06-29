@@ -68,6 +68,11 @@
                content: " "; 
             }
 
+            .disclaimer {
+                text-align: center;
+                font-size: 14px;
+            }
+
             
             /* ----------- iPhones ----------- */
 
@@ -319,7 +324,9 @@
         </style>
     </head>
     <body>                    
-            
+        
+        <h3><img src="http://www.after-car-accidents.com/images/Lock_icon.png">Your Information is 100% Secure and Confidential</h3>
+
         <label for="fullname" id="lblFullname">Full Name <span class="req">*</span></label>
         <input type="text" id="fullname" name="fullname" class="required">
 
@@ -328,18 +335,18 @@
 
         <label for="phone" id="lblPhone">Phone <span class="req">*</span></label>
 
-        <input type="tel" id="telephone" name="telephone" data-inputmask="'mask': '999 999 9999'" />
+        <input type="tel" id="telephone" name="telephone" data-inputmask="'mask': '999-999-9999'" />
 
-        <span class="dash"><input name="prim1" type="tel" id="prim1" maxlength="3" size="3" class="required phone" placeholder="###"></span>
+        <!-- <span class="dash"><input name="prim1" type="tel" id="prim1" maxlength="3" size="3" class="required phone" placeholder="###"></span>
         <span class="dash"><input name="prim2" type="tel" id="prim2" maxlength="3" size="3" class="required phone" placeholder="###"></span>
-        <span class="dash"><input name="prim3" type="tel" id="prim3" maxlength="4" size="4" class="required phone" placeholder="####"></span>
+        <span class="dash"><input name="prim3" type="tel" id="prim3" maxlength="4" size="4" class="required phone" placeholder="####"></span> -->
 
 
         <label for="zipcode" id="lblZipcode">Zip Code <span class="req">*</span></label>
         <input type="text" id="zipcode" name="zipcode" class="required">
 
-        <h3><img src="http://www.after-car-accidents.com/images/Lock_icon.png">Your Information is 100% Secure and Confidential</h3>
-        <p style="align:center;">Disclaimer: By submitting your request, you grant permission for up to two of our premier partners to contact you using the phone number or email address you have provided so we may assist you with your request for a free case evaluation and potentially an offer of representation and services. You agree that the matched partner may use an automatic telephone dialing system even if the number you provided is a wireless phone number. You understand that consent to being contacted is not a condition of purchase or acceptance of services of any kind.</p>
+        <!-- <h3><img src="http://www.after-car-accidents.com/images/Lock_icon.png">Your Information is 100% Secure and Confidential</h3> -->
+        <p class="disclaimer">Disclaimer: By submitting your request, you grant permission for up to two of our premier partners to contact you using the phone number or email address you have provided so we may assist you with your request for a free case evaluation and potentially an offer of representation and services. You agree that the matched partner may use an automatic telephone dialing system even if the number you provided is a wireless phone number. You understand that consent to being contacted is not a condition of purchase or acceptance of services of any kind.</p>
 
         <script type="text/javascript">
             $(":input").inputmask();
