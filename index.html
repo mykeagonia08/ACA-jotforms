@@ -128,14 +128,14 @@
             JFCustomWidget.subscribe("ready", function(){
                 JFCustomWidget.requestFrameResize(600, 900); //Request Frame Resize
                 
-                // JFCustomWidget.getWidgetSettings();
-                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                document.getElementById('lblFullname').innerHTML = label;
+                JFCustomWidget.getWidgetSettings();
+                // var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
+                // document.getElementById('lblFullname').innerHTML = label;
                 // document.getElementById('lblEmail').innerHTML = label;
                 // document.getElementById('lblPhone').innerHTML = label;
                 // document.getElementById('lblZipcode').innerHTML = label;
 
-                var msgValue = "Full Name: "+document.getElementById('fullname').value+" |Email: "+document.getElementById('email').value+" | Phone: "+document.getElementById('telephone').value+" | Zip Code: "+document.getElementById('zipcode').value;
+                // var msgValue = "Full Name: "+document.getElementById('fullname').value+" |Email: "+document.getElementById('email').value+" | Phone: "+document.getElementById('telephone').value+" | Zip Code: "+document.getElementById('zipcode').value;
                 
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
@@ -143,7 +143,7 @@
                         //you should valid attribute to data for JotForm
                         //to be able to use youw widget as required
                         valid: true,
-                        value: msgValue
+                        value: "Full Name: "+document.getElementById('fullname').value+" |Email: "+document.getElementById('email').value+" | Phone: "+document.getElementById('telephone').value+" | Zip Code: "+document.getElementById('zipcode').value
                     }
                     // send value to JotForm
                     JFCustomWidget.sendSubmit(msg);
