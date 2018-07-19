@@ -128,19 +128,21 @@
             JFCustomWidget.subscribe("ready", function(){
                 JFCustomWidget.requestFrameResize(600, 900); //Request Frame Resize
                 
-                JFCustomWidget.getWidgetSettings();
-                // var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                // document.getElementById('lblFullname').innerHTML = label;
-                // document.getElementById('lblEmail').innerHTML = label;
-                // document.getElementById('lblPhone').innerHTML = label;
-                // document.getElementById('lblZipcode').innerHTML = label;
+                // JFCustomWidget.getWidgetSettings();
+                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
+                document.getElementById('lblFullname').innerHTML = label;
+                document.getElementById('lblEmail').innerHTML = label;
+                document.getElementById('lblPhone').innerHTML = label;
+                document.getElementById('lblZipcode').innerHTML = label;
+
+                var msgValue = "Full Name: "+document.getElementById('lblFullname').value+" |Email: "+document.getElementById('lblEmail').value+" | Phone: "+document.getElementById('lblPhone').value+" | Zip Code: "+document.getElementById('lblZipcode').value
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
                     var msg = {
                         //you should valid attribute to data for JotForm
                         //to be able to use youw widget as required
                         valid: true,
-                        value: "Contact Information"
+                        value: msgValue
                     }
                     // send value to JotForm
                     JFCustomWidget.sendSubmit(msg);
